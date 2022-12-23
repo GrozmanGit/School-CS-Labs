@@ -1,20 +1,18 @@
 ## Lab 0.1 Basic Outputs ##
 
-1. 
+**1. Write a program that produces the following output:**
 
-Write a program that produces the following output:
 ****************************
   * Basic Outputs Lab *
  * Computer Programming *
   * Author: YOUR NAME *
         * Date: *
 ****************************
+```
+System.out.println("\n\t****************************\n" + "\t\t* Basic Outputs Lab *\n" + "\t*   Computer Programming   *\n" + "  *     Author: ------ -------    *\n" + "\t\t*  Date: 5/19/2022  *\n" + "\t****************************\n"); 
+```
+**2. Write a program that prints the following pattern:**
 
-`System.out.println("\n\t****************************\n" + "\t\t* Basic Outputs Lab *\n" + "\t*   Computer Programming   *\n" + "  *     Author: ------ -------    *\n" + "\t\t*  Date: 5/19/2022  *\n" + "\t****************************\n");` 
-
-2. 
-
-Write a program that prints the following pattern:
    *
   * *
  * * *
@@ -22,9 +20,8 @@ Write a program that prints the following pattern:
 
 `System.out.println("\t\t*\n" + "\t   * *\n" + "\t  * * *\n" + "\t * * * *\n");`
 
-3. 
+**3. Write a program that prints the following banner:**
 
-Write a program that prints the following banner:
 **************************
 **************************
 **********WELCOME*********
@@ -33,5 +30,129 @@ Write a program that prints the following banner:
 ***********HOME***********
 **************************
 **************************
+```
+System.out.println("\t**************************" +    "\n\t**************************" + "\n\t**********WELCOME*********" + "\n\t==========================" + "\n\t==========================" + "\n\t***********HOME***********" + "\n\t**************************" + "\n\t**************************");
+```
+## Lab 0.2 Advanced Outputs ##
 
-`System.out.println("\t**************************" +    "\n\t**************************" + "\n\t**********WELCOME*********" + "\n\t==========================" + "\n\t==========================" + "\n\t***********HOME***********" + "\n\t**************************" + "\n\t**************************");`
+**1. Write a program that produces the following output:**
+   **Use only ONE System.out.println instruction for this problem.**
+
+****************************
+   * Basic Outputs Lab *
+  * Computer Programming *
+    * Author: YOUR NAME *
+          * Date: *
+****************************
+```
+System.out.println("\n\t****************************\n" + "\t\t* Advanced Outputs Lab *\n" + "\t*   Computer Programming    *\n" + "  *     Author: ------ -------    *\n" + "\t\t*  Date: 5/22/2022  *\n" + "\t****************************\n");
+```
+**2. Write a program that prints the following pattern:**
+
+   \
+  \ \
+ \ \ \
+\ \ \ \
+
+`System.out.println("\t\t\\\n" + "\t   \\ \\\n" + "\t  \\ \\ \\\n" + "\t \\ \\ \\ \\\n");`
+
+**3. Write a program that prints the following banner:**
+
+*\*\*\*\*\*\*\*\*\*\*\*\*\
+\*\*\*\*\*\*\*\*\*\*\*\*\*
+**********WELCOME*********
+““““““““““““““““““““““““““
+““““““““““““““““““““““““““
+***********HOME***********
+*\*\*\*\*\*\*\*\*\*\*\*\*\
+\*\*\*\*\*\*\*\*\*\*\*\*\*
+```
+System.out.println("\t*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\\n" + "\t\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*" + "\n\t**********WELCOME*********" + "\n\t" + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"" + "\"\"" + "\n\t" + "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"" + "\"\"" + "\n\t***********HOME***********" + "\n\t*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\\n" + "\t\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*\\*");
+```
+## Lab 0.3 Variables And Data Types ##
+
+**Sample Output:**
+/////////////////////////////////
+*Some Person            07/18/02*
+*                               *
+*          integer types        *
+*                               *
+*8 bit - byteOne = 127          *
+*16 bit - shortOne = -32123     *
+*32 bit - intOne = 90877        *
+*64 bit - longOne = 999999999   *
+*                               *
+*          real types           *
+*                               *
+*64 bit - doubleOne = 923.234   *
+*                               *
+*      other integer types      *
+*                               *
+*16 bit - charOne = A           *
+*                               *
+*          other types          *
+*                               *
+*booleanOne = true              *
+*stringOne = hello world        *
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+```
+/* integer types */
+byte byteOne = 127; 
+short shortOne = -32_123; 
+int intOne = 90_877; 
+long longOne = 999_999_999; 
+
+/* other types */
+double doubleOne = 923.234;
+char charOne = 'A'; 
+boolean booleanOne = true; 
+String stringOne = "hello world"; 
+
+/* line spacer */
+String strAstln = "*                                  *";  
+
+/* print out card */
+System.out.println("\n////////////////////////////////////");
+System.out.println("* ------ -------         8/23/2022 *");
+System.out.println(strAstln);
+System.out.println("*           integer types          *");
+System.out.println(strAstln);  
+System.out.println("*8 bit - byteOne = " + byteOne + "             *");
+System.out.println("*16 bit - shortOne = " + shortOne + "        *"); 
+System.out.println("*32 bit - intOne = " + intOne +   "           *"); 
+System.out.println("*64 bit - longOne = " + longOne + "      *");
+System.out.println(strAstln);
+System.out.println("*            real types            *");
+System.out.println(strAstln);
+System.out.println("*64 bit - doubleOne = " + doubleOne + "      *"); 
+System.out.println(strAstln); 
+System.out.println("*       other integer types        *");
+System.out.println(strAstln); 
+System.out.println("*16 bit - charOne = " + charOne +  "              *");
+System.out.println(strAstln);
+System.out.println("*booleanOne = " + booleanOne + "                 *");
+System.out.println("*stringOne = " + stringOne + "           *");
+System.out.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
+```
+## Lab 0.5 Math Input ##
+
+**Sample Output:**
+Sample Data: 20 4
+20 + 4 = 24
+20 – 4 = 16
+20 * 4 = 80
+20 / 4 = 5
+20 % 4 = 0
+```
+Scanner sc = new Scanner(System.in);
+    
+System.out.println("\nEnter two Integers: ");
+int i = sc.nextInt(); 
+int j = sc.nextInt();
+    
+System.out.println("\n" + i + " + " + j + " = " + (i+j));
+System.out.println(i + " - " + j + " = " + (i-j));
+System.out.println(i + " * " + j + " = " + (i*j)); 
+System.out.println(i + " / " + j + " = " + (i/j));
+System.out.println(i + " % " + j + " = " + (i%j)); 
+```
