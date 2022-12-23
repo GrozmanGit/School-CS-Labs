@@ -1,0 +1,118 @@
+## Lab 1.1 MathFunHouse ##
+
+**Part 0: Set-up**
+- Create a Scanner object that reads in from the keyboard, and name it “key” (HINT: You only need ONE Scanner object for the whole lab.)
+- Ask the user to enter their name and then print out a welcome message with their name.
+
+**Part 1: Slope of a line**
+- Ask the user to enter x1, x2, y1, y2
+- Calculate the slope of the given line by subtracting the y values and dividing by the difference of the x values, then print the result.
+
+**Part 2: Perimeter of a Rectangle**
+- Generate two random numbers (one from 1 -10 inclusive, and one from 5 – 20 inclusive) to represent the length and width of a rectangle.
+- Multiply each measurement by 2 and add together then print the result.
+
+**Part 3: Area of a Trapezoid**
+- Ask the user to enter the first base, the second base, and the height
+- Add the bases together, then multiply by the height. Divide by 2 and print the result.
+
+**Part 4: Volume of a Cone**
+- Ask the user to enter the radius and the height.
+- Use the formula: pi*r^2*(h/3) to calculate the volume and print the result. Note: Must use pow() method.
+- Use Math.PI for pi
+
+**Part 5: Surface area of a Cube**
+- Ask the user to enter the height of the cube.
+- Calculate the surface area by multiplying the squared height by 6 then print the result. Note: Must use pow() method.
+
+**BONUS (+5): Hypotenuse**
+- Ask the user to enter side A and B of a triangle.
+- Calculate the hypotenuse and print the result. Note: Must use pow() method.
+
+**Sample Output:** 
+Enter your name:: **user**
+Welcome user
+
+Enter the x1, x2, y1, y2 coordinates **2 4 5 3**
+The slope of the line is -1.0
+
+The random numbers generated are 8 and 16
+The perimeter of the rectangle is 48
+
+Enter the first base, second base, and height **5 6 2**
+The area of the trapezoid is 11.0
+
+Enter the radius and height **4 8**
+The volume of the cone is 134.0412865531645
+
+Enter the height **7**
+The surface area of the cube is 294.0
+
+Enter side A and side B **3 4**
+The hypotenuse of the triangle is 5.0
+
+```
+Scanner key = new Scanner(System.in);
+
+String name; 
+    
+// Part-0: set-up
+System.out.print("\nEnter your name:: ");
+name = key.nextLine();
+System.out.println("Welcome " + name);
+    
+// Part-1: slope of line
+System.out.print("\nEnter the x1, x2, y1, y2 coordinates: ");
+    
+int x1 = key.nextInt(); 
+int x2 = key.nextInt(); 
+int y1 = key.nextInt(); 
+int y2 = key.nextInt();
+    
+int m = (y2 - y1)/(x2 - x1); 
+System.out.println("The slope of the line is: " + (double)m);
+
+// Part-2: permieter of a rectangle
+Random rand = new Random();
+int width = 1 + rand.nextInt(10); // [0, 9] -> [1, 10]
+int length = 5 + rand.nextInt(16); // [0, 15] -> [5, 20]
+    
+System.out.println("\nThe random numbers generated are: " + "[width] "+width + " and " + "[length] "+length);
+System.out.println("The perimeter of the rectangle is: " + ((width*2) + (length*2)));  
+    
+// Part-3: area of a trapezoid
+System.out.print("\nEnter the first base, second base and height: "); 
+    
+int base01 = key.nextInt(); 
+int base02 = key.nextInt();
+int height = key.nextInt(); 
+    
+double area = (double)(((base01 + base02)*height)/2);
+System.out.println("The area of the trapezoid is: " + area);
+    
+// Part-4: volume of a cone
+System.out.print("\nEnter the radius and height: "); 
+
+int radius = key.nextInt(); 
+height = key.nextInt();
+    
+double volume = (double)((Math.PI * (Math.pow(radius, 2)) * height)/3); 
+System.out.println("The volume of the cone is: " + volume);
+    
+// Part-5: surface area of a cube
+System.out.print("\nEnter the height: "); 
+    
+height = key.nextInt(); 
+    
+double surface = (double)(6 * (Math.pow(height, 2))); 
+System.out.println("The surface area of the cube is: " + surface);
+    
+// BONUS: hypotenuse
+System.out.print("\nEnter side A and side B: "); 
+    
+int sideA = key.nextInt(); 
+int sideB = key.nextInt(); 
+    
+double hypotenuse = (double)(Math.sqrt(((Math.pow(sideA, 2)) + (Math.pow(sideB, 2))))); 
+System.out.println("The hypotenuse of the triangle is: " + hypotenuse);
+```
