@@ -1,0 +1,90 @@
+## Lab 2.1 Average Length ##
+
+**Sample Output:**
+Enter two words separated by a space: **hello goodbye**
+The average length of the words hello and goodbye is 6
+
+Enter two words separated by a space: **dog cat**
+The average length of the words dog and cat is 3
+
+Enter two words separated by a space: **rectangle hi**
+The average length of the words rectangle and hi is 5
+
+```
+System.out.print("\nEnter two words seperated by a space: ");
+input_1 = sc.next(); 
+input_2 = sc.next();
+    
+System.out.println("The average length of the words " + input_1 + " and " + input_2 + " is " + ((input_1.length() + input_2.length())/2)); 
+```
+
+## Lab 2.2 First Middle Last ##
+
+**Sample Output:**
+word :: Hello
+first letter :: H
+last letter :: o
+middle :: l
+
+word :: World
+first letter :: W
+last letter :: d
+middle :: r
+
+word :: JukeBox
+first letter :: J
+last letter :: x
+middle :: e
+
+word :: TCEA
+first letter :: T
+last letter :: A
+middle :: E
+
+word :: UIL
+first letter :: U
+last letter :: L
+middle :: I
+
+```
+Scanner sc = new Scanner(System.in); 
+String word = sc.next(); 
+
+int median = word.length()/2; 
+int last = word.length()-1; 
+    
+System.out.println("word :: " + word); 
+System.out.println("first letter :: " + word.charAt(0)); 
+System.out.println("last letter :: " + word.charAt(last)); 
+System.out.println("middle letter :: " + word.charAt(median)); 
+```
+
+## Lab 2.3 StringRipper ##
+
+**Sample Data:**
+elephants@are@big
+computer@science
+dogs@are@smarter@than@cats
+chickens@are@kewl
+
+**Sample Output:**
+elephants
+computer
+dogs
+chickens
+
+```
+public static String getFirstChunk(String a) 
+{
+  return a.substring(0, a.indexOf('@'));
+}
+
+public static void main(String args[]) 
+{
+// method calls
+System.out.println(getFirstChunk("elephants@are@big"));
+System.out.println(getFirstChunk("computer@science"));
+System.out.println(getFirstChunk("dogs@are@smarter@than@cats"));
+System.out.println(getFirstChunk("chickens@are@kewl"));
+}
+```
